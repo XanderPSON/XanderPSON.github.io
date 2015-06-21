@@ -1,12 +1,12 @@
-#id a:link {
+#access a:link {
  color: gray;
  text-decoration: none;
 }
 
-a:hover {
-	color: white;
+#access a:visited {
+	color: gray;
 }
 
-a:visited {
-	color: gray;
+#access a:hover {
+	color: white;
 }
