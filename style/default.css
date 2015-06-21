@@ -1,0 +1,12 @@
+#id a:link {
+ color: gray;
+ text-decoration: none;
+}
+
+a:hover {
+	color: white;
+}
+
+a:visited {
+	color: gray;
+}
