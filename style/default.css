@@ -57,11 +57,15 @@ body {
     height: 20em;
     margin-left: auto;
     margin-right: auto;
-    width: 40em;
+    width: 45em;
 }
 
 #body p {
     color: #dddddd;
+}
+
+#footer {
+    margin-right: 10em;
 }
 
 #footer p {
