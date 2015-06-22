@@ -65,13 +65,15 @@ body {
 }
 
 #footer {
-    width: 45em;
+    width: 49em;
     margin-left: auto;
     margin-right: auto;
+    height: 10em;
 }
 
 #footer p {
     color: #A0A6A9;
     font: Helvetica, sans-serif;
     float: right;
+    text-align: right;    
 }
