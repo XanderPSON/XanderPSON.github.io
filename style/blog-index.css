@@ -4,7 +4,7 @@ body {
 
 * {
     font-family: Helvetica, sans-serif;
-}
+}..
 
 #header {
 }
@@ -39,6 +39,7 @@ body {
 #nav li a {
     color: #A0A6A9;
     font-size: 20px;
+    font: Helvetica, sans-serif;
     text-decoration: none;
     margin-right: 20px;
     padding-right: 20px;
