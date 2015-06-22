@@ -67,18 +67,18 @@ body {
     text-align: center;
 }
 
-#body table {
+#blogIndex {
     width: 100%;
     line-height: 4em;
 }
 
-#body table a {
+#blogIndex a {
     color: #dddddd;
     font-size: 18px;
     text-decoration: none;
 }
 
-#body table a:hover {
+#blogIndex a:hover {
     color: white;
 }
 
