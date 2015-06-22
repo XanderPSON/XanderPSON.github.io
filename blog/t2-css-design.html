@@ -1,26 +1,64 @@
 <!DOCTYPE html>
-<head>
-  <title>Your page title here</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../style/blog-post.css">
-</head>
-
-<main>
-  <h1>Post Title</h1>
-  <h2>The subtitle, if you want it</h2>
-  <h4>Today's Date</h4>
-
-  <section>
+<html>
+    <head>
+        <title>Back That CSS Up!</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../style/default.css">
+        <link rel="stylesheet" type="text/css" href="../style/blog-post.css">
+    </head>
+<body>
+<div id="wrapper">
+<body>
+<div id="wrapper">
+<div id="header">
+    <div id="branding">
+        <a href="../index.html"><img id="logo" src="../imgs/kanjiZan.jpg" alt="XanderPSON" title="XanderPSON"/></a>
+    </div>
+    <div id="nav">
+     <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="blog-index.html">Blog</a></li>
+     </ul>
+    </div>
+</div>
+<div id="body">
+ <h1>Back That CSS Up!</h1> 
+ <h2>Assume the Position</h2>
+ <h3>June 21st, 2015</h3>
+    <section>
     <p>
-      Your first paragraph goes here. I'm using Web 2.0 Ipsum to add content. Webtwo ipsum dolor sit amet, eskobo chumby doostang bebo. Nuvvo koofers oooooc voxy klout jaiku palantir flickr insala zinch napster oooj, airbnb mzinga vimeo yuntaa balihoo plickers whrrl edmodo appjet kippt. Yoono imvu hulu eduvant blekko imvu ebay voki napster skype, hipmunk zinch wesabe bubbli ning meebo bitly zlio. Fleck elgg ideeli disqus rovio zillow sifteo blyve jabber, bitly geni zoho foodzie qeyno twones klout jiglu, hipmunk jaiku balihoo plickers heekya eskobo yuntaa. Sococo whrrl plickers movity whrrl zinch voki nuvvo meebo, quora heroku unigo kno wufoo jibjab woopra, groupon yuntaa spock mzinga jumo meebo movity.
+      Positioning elements in CSS has got to be one of the most confusing things to learn. We're so used to being able to just drag and drop everything that when you're no longer able to it becomes quite a challenge to conceptualize. Furthermore, you have to plan for a whole host of possibile collisions between elements as the user interacts with your interface. I believe that I finally understand the different types of positioning well enough to explain it, but am still wet enough behind the ears that my explanations should serve as a good bridge between being completely new and understanding the basics.
     </p>
     <p>
-        Lijit groupon ning stypi eskobo blyve ning shopify oooooc, meebo groupon prezi ebay voxy bitly diigo. Spock ifttt skype hipmunk movity whrrl bebo oooj empressr, disqus insala palantir bitly dropio zimbra zinch oooooc etsy, klout spock insala quora omgpop trulia jibjab. Sifteo dogster ebay grockit geni scribd bitly ning unigo, plickers voki mzinga tumblr kaboodle mozy whrrl woopra udemy, foodzie joukuu elgg twitter shopify akismet rovio. Kosmix eduvant woopra dopplr balihoo ning bebo akismet, boxbe vimeo kosmix shopify zappos bitly geni loopt, qeyno disqus sococo squidoo wikia octopart.
+    There are four main types of positioning elements: *position: static*, *position: relative*, *position: absolute*, and *position: float*.
     </p>
-    <p>
-        Kazaa meevee eduvant gsnap movity kosmix kazaa klout jumo, trulia unigo groupon wakoopa spock knewton glogster heroku oooj, ning imvu appjet eskobo zillow twitter rovio. Glogster chegg voxy greplin dopplr voki foodzie xobni weebly odeo, sococo zynga knewton loopt palantir lala blyve tumblr blekko, twones akismet plaxo kippt meebo zillow zooomr insala. Oovoo imeem napster divvyshot zinch imeem voxy shopify, fleck kazaa zinch lanyrd boxbe joost wakoopa nuvvo, orkut elgg heekya sifteo scribd napster. Yammer yoono groupon dopplr cloudera nuvvo eduvant klout, voxy groupon disqus eduvant oooj greplin.
+    <p>* **position: static** *<br>
+    The default positioning for all elements is *position: static*. As it is the default positioning you do not need to specify it.
     </p>
+    <p>* **position: relative** *<br>
+    With *position: relative* you are able to move an element around the screen **relative to where it would normally be with *position: static*.** What this means is if you enter in *position: relative* and don't use further directional commands to move the element around, it will stay in the exact place, because it's default position is the same as *position: static*. The directional commands that *position: relative* can take are *top*, *bottom*, *left*, and *right*. So for example, entering *top: 50px* will move the element 50 pixels from the top (so downwards) of where it would normally be.
 
-      <!-- copy and paste as many sections as you want to add paragraphs -->
-  </section>
-</main>
+    It's important to note, however, that even if you've moved an element with *position: relative*, other elements won't fill up the space it's left blank, because it is still considered to be occupying that space. This can leave big blanks paces in your layout that you have to fix!
+    </p>
+    <p>* **position: absolute** *<br>
+    Using *position: absolute* gives you the most freedom over where to place the element. It takes the same directional commands as *position: relative*, but instead of moving the element relative to it's normal default position, you move the element relative the next element above it that has a position of *position: relative*. By default this is the webpage itself, so if you don't set anything else to *position: relative*, the element you assign *position: absolute* to will move relative to the screen itself! So if you were to do *top: 0* then that element would shoot straight to the top of the page! Note that when you do this the element is considered to have "left" its normal spot, and other elements will fill up the space; this is counter to what happens with *position: relative*.
+
+    However, if there is a parent element with a position of *position: relative* set before the *position: absolute* element, then the *position: absolute* element will move in relation to that *position: relative* element. So now if you do *top: 0* you'll find that the element only moves up to the top of the *position: absolute* element, not to the top of the screen.
+    </p>
+    <p>* **position: fixed** *<br>
+    Finally we have *position: fixed*. Assiging this to an element is sort of like assigning an element *position: absolute* when no parent element is set to *position: relative*; in other words, setting an element to *position: fixed* to *top: 0* will send the element straight to the top of the window! *postion: fixed* will always be moved relative to the screen. There is one catch though - this means that if the user scrolls down the page, that element will still be affixed to the screen at that place! Therefore this should only be used in instances when you want something to permanently follow the user; for example, the main link bar at the top, or a scroll bar on the side.
+    </p>
+    <p>Positioning in CSS can be really, *really* tricky to understand, and to be honest, I'm still figuring it out. But hopefully this gave you a little better idea of what to expect when trying to arrange your elements. Good luck!
+    </p>
+    </section>
+</div>
+<div id="footer">
+    <p>Designed by XanderPSON</p>
+</div>
+</div>
+</body>
+</html>
