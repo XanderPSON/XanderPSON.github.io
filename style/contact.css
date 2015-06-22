@@ -68,6 +68,15 @@ body {
     font-size: 30px;
 }
 
+#contactButtons {
+    display: inline-block;
+}
+
+#contactButtons img {
+    width:  100px;
+    height: 100px;
+}
+
 #footer {
     width: 69em;
     margin-left: auto;
