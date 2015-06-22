@@ -69,19 +69,9 @@ body {
     font-size: 18px;
 }
 
-#blogIndex {
+#body img {
     width: 100%;
-    line-height: 4em;
-}
-
-#blogIndex a {
-    color: #dddddd;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-#blogIndex a:hover {
-    color: white;
+    height: auto;
 }
 
 #footer {
