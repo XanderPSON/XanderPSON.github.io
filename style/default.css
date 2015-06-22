@@ -9,7 +9,7 @@ body {
     height: 15em;
 }
 
-#logo{
+#logo {
     height: 100%;
     display: block;
     left: 0;
@@ -54,7 +54,7 @@ body {
     background-color: #333333;
     border: 2px solid #C2CCCC;
     padding: 2em;
-    height: 20em;
+    height: 30em;
     margin-left: auto;
     margin-right: auto;
     width: 45em;
@@ -65,7 +65,9 @@ body {
 }
 
 #footer {
-    margin-right: 10em;
+    width: 45em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #footer p {
