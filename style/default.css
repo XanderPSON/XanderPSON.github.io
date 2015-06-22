@@ -1,26 +1,52 @@
-#body {
-	background: #252525;
+body {
+ background-color: #252525;   
 }
 
-#header {
- position: relative;
- height: 200px;
- left: 0;
- right: 0;
- margin-left: auto;
- margin-right: auto;
+#headerWrapper {
+    background-color: red;
 }
 
-#access ul {
-	display: inline;
-	list-style: none;
+#topbar{
+    background-color: green;
+    height: 15em;
 }
 
-#access a:link {
-	color: gray;
-	text-decoration: none;
+#logo{
+    height: 100%;
+    display: block;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#access a:hover {
-	color: white;
+#bottombar{
+    background-color: yellow;
+    clear: both;
+    margin: 0px;
+}
+
+#bottombar ul {
+    margin-top: 0px;
+    text-align: center;
+}
+
+#bottombar li {
+    display: inline;
+}
+
+#bottombar li a {
+    color: #a8a8a8;
+    text-decoration: none;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid black;
+}
+
+#bottombar li a:hover{
+    color: white;
+}
+
+#bottombar li:last-child a {
+    border-right: none;
 }
