@@ -1,13 +1,11 @@
 body {
- background-color: #252525;   
+ background-color: #1e1e20;   
 }
 
-#headerWrapper {
-    background-color: red;
+#header {
 }
 
-#topbar{
-    background-color: green;
+#branding{
     height: 15em;
 }
 
@@ -20,33 +18,49 @@ body {
     margin-right: auto;
 }
 
-#bottombar{
-    background-color: yellow;
+#nav {
     clear: both;
-    margin: 0px;
+    margin-top: 1em;
 }
 
-#bottombar ul {
+#nav ul {
     margin-top: 0px;
     text-align: center;
 }
 
-#bottombar li {
+#nav li {
     display: inline;
 }
 
-#bottombar li a {
-    color: #a8a8a8;
+#nav li a {
+    color: #A0A6A9;
+    font-size: 20px;
+    font: Helvetica, sans-serif;
     text-decoration: none;
     margin-right: 20px;
     padding-right: 20px;
-    border-right: 1px solid black;
+    border-right: 1px solid #A0A6A9;
 }
 
-#bottombar li a:hover{
+#nav li a:hover {
     color: white;
 }
 
-#bottombar li:last-child a {
+#nav li:last-child a {
     border-right: none;
+}
+
+#body {
+    border: 2px solid white;
+    height: 20em;
+}
+
+#body p {
+    color: white
+}
+
+#footer p {
+    color: #A0A6A9;
+    font: Helvetica, sans-serif;
+    float: right;
 }
