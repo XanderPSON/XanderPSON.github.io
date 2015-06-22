@@ -1,5 +1,5 @@
 body {
- background-color: #1e1e20;   
+ background-color: #1e1e20;
 }
 
 * {
@@ -65,6 +65,21 @@ body {
     box-shadow: inset 0px 0px 4px 4px #565656;
     color: #dddddd;
     text-align: center;
+}
+
+#body table {
+    width: 100%;
+    line-height: 4em;
+}
+
+#body table a {
+    color: #dddddd;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#body table a:hover {
+    color: white;
 }
 
 #footer {

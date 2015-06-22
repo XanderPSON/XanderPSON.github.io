@@ -1,10 +1,10 @@
 body {
- background-color: #1e1e20;   
+ background-color: #1e1e20;
 }
 
 * {
     font-family: Helvetica, sans-serif;
-}..
+}
 
 #header {
 }
@@ -39,7 +39,6 @@ body {
 #nav li a {
     color: #A0A6A9;
     font-size: 20px;
-    font: Helvetica, sans-serif;
     text-decoration: none;
     margin-right: 20px;
     padding-right: 20px;
@@ -58,16 +57,29 @@ body {
     background-color: #333333;
     border: 2px solid #98a9a9;
     border-radius: 20px;
-    padding: 3em;
-    height: 25em;
+    padding: 1em 3em 3em;
+    min-height: 25em;
     margin-left: auto;
     margin-right: auto;
     width: 65em;
     box-shadow: inset 0px 0px 4px 4px #565656;
+    color: #dddddd;
+    text-align: center;
 }
 
-#body p {
+#blogIndex {
+    width: 100%;
+    line-height: 4em;
+}
+
+#blogIndex a {
     color: #dddddd;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#blogIndex a:hover {
+    color: white;
 }
 
 #footer {
