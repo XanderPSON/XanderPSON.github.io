@@ -34,25 +34,26 @@
       Positioning elements in CSS has got to be one of the most confusing things to learn. We're so used to being able to just drag and drop everything that when you're no longer able to it becomes quite a challenge to conceptualize. Furthermore, you have to plan for a whole host of possibile collisions between elements as the user interacts with your interface. I believe that I finally understand the different types of positioning well enough to explain it, but am still wet enough behind the ears that my explanations should serve as a good bridge between being completely new and understanding the basics.
     </p>
     <p>
-    There are four main types of positioning elements: *position: static*, *position: relative*, *position: absolute*, and *position: float*.
+      There are four main types of positioning elements: <i>position: static</i>, <i>position: relative</i> <i>position: absolute</i>, and <i>position: fixed</i>.
     </p>
-    <p>* **position: static** *<br>
-    The default positioning for all elements is *position: static*. As it is the default positioning you do not need to specify it.
+    <p><b><i>position: static</i></b><br>
+      The default positioning for all elements is <i>position: static</i>. As it is the default positioning you do not need to specify it.
     </p>
-    <p>* **position: relative** *<br>
-    With *position: relative* you are able to move an element around the screen **relative to where it would normally be with *position: static*.** What this means is if you enter in *position: relative* and don't use further directional commands to move the element around, it will stay in the exact place, because it's default position is the same as *position: static*. The directional commands that *position: relative* can take are *top*, *bottom*, *left*, and *right*. So for example, entering *top: 50px* will move the element 50 pixels from the top (so downwards) of where it would normally be.
+    <p><b><i>position: relative</i></b><br>
+     With <i>position: relative</i>you are able to move an element around the screen <b>relative</b> to where it would normally be with <i>position: static</i>. What this means is if you enter in <i>position: relative</i>and don't use further directional commands to move the element around, it will stay in the exact place, because it's default position is the same as <i>position: static</i>. The directional commands that <i>position: relative</i>can take are <i>top</i>, <i>bottom</i>, <i>left</i>, and <i>right</i>. So for example, entering <i>top: 50px</i> will move the element 50 pixels from the top (so downwards) of where it would normally be.
 
-    It's important to note, however, that even if you've moved an element with *position: relative*, other elements won't fill up the space it's left blank, because it is still considered to be occupying that space. This can leave big blanks paces in your layout that you have to fix!
+      It's important to note, however, that even if you've moved an element with <i>position: relative</i> other elements won't fill up the space it's left blank, because it is still considered to be occupying that space. This can leave big blanks paces in your layout that you have to fix!
     </p>
-    <p>* **position: absolute** *<br>
-    Using *position: absolute* gives you the most freedom over where to place the element. It takes the same directional commands as *position: relative*, but instead of moving the element relative to it's normal default position, you move the element relative the next element above it that has a position of *position: relative*. By default this is the webpage itself, so if you don't set anything else to *position: relative*, the element you assign *position: absolute* to will move relative to the screen itself! So if you were to do *top: 0* then that element would shoot straight to the top of the page! Note that when you do this the element is considered to have "left" its normal spot, and other elements will fill up the space; this is counter to what happens with *position: relative*.
+    <p><b><i>position: absolute</i></b><br>
+     Using <i>position: absolute</i> gives you the most freedom over where to place the element. It takes the same directional commands as <i>position: relative</i> but instead of moving the element relative to it's normal default position, you move the element relative the next element above it that has a position of <i>position: relative</i> By default this is the webpage itself, so if you don't set anything else to <i>position: relative</i> the element you assign <i>position: absolute</i> to will move relative to the screen itself! So if you were to do <i>top: 0</i> then that element would shoot straight to the top of the page! Note that when you do this the element is considered to have "left" its normal spot, and other elements will fill up the space; this is counter to what happens with <i>position: relative</i>
 
-    However, if there is a parent element with a position of *position: relative* set before the *position: absolute* element, then the *position: absolute* element will move in relation to that *position: relative* element. So now if you do *top: 0* you'll find that the element only moves up to the top of the *position: absolute* element, not to the top of the screen.
+      However, if there is a parent element with a position of <i>position: relative</i>set before the <i>position: absolute</i> element, then the <i>position: absolute</i> element will move in relation to that <i>position: relative</i>element. So now if you do <i>top: 0</i> you'll find that the element only moves up to the top of the <i>position: absolute</i> element, not to the top of the screen.
     </p>
-    <p>* **position: fixed** *<br>
-    Finally we have *position: fixed*. Assiging this to an element is sort of like assigning an element *position: absolute* when no parent element is set to *position: relative*; in other words, setting an element to *position: fixed* to *top: 0* will send the element straight to the top of the window! *postion: fixed* will always be moved relative to the screen. There is one catch though - this means that if the user scrolls down the page, that element will still be affixed to the screen at that place! Therefore this should only be used in instances when you want something to permanently follow the user; for example, the main link bar at the top, or a scroll bar on the side.
+    <p><b><i>position: fixed</i></b><br>
+      Finally we have <i>position: fixed</i>. Assiging this to an element is sort of like assigning an element <i>position: absolute</i> when no parent element is set to <i>position: relative</i> in other words, setting an element to <i>position: fixed</i> to <i>top: 0</i> will send the element straight to the top of the window! <i>postion: fixed</i> will always be moved relative to the screen. There is one catch though - this means that if the user scrolls down the page, that element will still be affixed to the screen at that place! Therefore this should only be used in instances when you want something to permanently follow the user; for example, the main link bar at the top, or a scroll bar on the side.
     </p>
-    <p>Positioning in CSS can be really, *really* tricky to understand, and to be honest, I'm still figuring it out. But hopefully this gave you a little better idea of what to expect when trying to arrange your elements. Good luck!
+    <p>
+      Positioning in CSS can be really, <b>really</b> tricky to understand, and to be honest, I'm still figuring it out. But hopefully this gave you a little better idea of what to expect when trying to arrange your elements. Good luck!
     </p>
     </section>
 </div>
