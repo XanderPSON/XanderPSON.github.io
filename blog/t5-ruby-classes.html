@@ -31,18 +31,72 @@
  <h3>July 19th, 2015</h3>
     <section>
    <p>
-   Enumerables inn Ruby are a way of going through a set of data one value at a time. The <code>Enumerable</code> class has an element called <code>find_all</code> that I believe exemplifies not only what an enumerable does but also a core tennant of Ruby theory.
+   Classes allow you to create real-world objects. For my example, though, I am going to make something that is slightly geeky - a real-world object of an RPG class type: the Rogue.
+   <pre><code>
+    > class Rogue
+    > attr_reader :name, :weapon, :level, :str, :dex
+    >
+    > def initialize(name, weapon)
+    >   @name = name
+    >   @weapon = weapon
+    >   @level = 1
+    >   @str = 10
+    >   @dex = 15
+    > end
+    >
+    > def attack
+    >   if @str < 30
+    >   puts rand(1..6)
+    >   else
+    >   puts rand(1..6) + rand(1..6)
+    >   end
+    >   if @weapon == "bow"
+    >   puts "You deal extra damage of #{rand(1..6)} with your bow!"
+    >   end
+    > end
+    >
+    > def saving_roll
+    >   if @dex < 20
+    >   puts rand(1..6) + rand(1..6)
+    >   else
+    >   puts rand(1..6) + rand(1..6) + rand(1..6)
+    >   end
+    > end
+    >
+    > def level_up
+    >   @level += 1
+    >   @str += 1
+    >   @dex += 2
+    > end
+    >
+    > end 
+   </code></pre>
    </p>
    <p>
-   According to the Ruby Docs: <em><code>Enumerables#find_all</code> returns an array containing all elements of of <code>enum</code>(that is, the thing being operated on) for which the given <code>block</code> returns a true value.</em> Basically what that means is that you are able to give <code>find_all</code> a set of requirements inside of the block and have it return an array of everything that meets that requierment. For example, take a look at the following expression:
-   <pre><code>["red", "white", "blue", "gold", "silver"].find_all {|i| i.size > 4}   #=> ["white", "silver"]</code></pre>
-   This piece of code will return an array that contains the strings "white" and "silver" because both of those words have a size greater than 4. This is but a simple example of how useful find_all can be.
+    Okay, so let's unpack this. What's going on here? Well on the first line we've created an object of class called Rogue. On the second line we use <code>attr_reader</code> to generate a list of what are called <em>instance variables</em>. An instance variable is a variable is denoted by the @ sign in front of it. An instance variable is a variable that is accessible to all methods within that instance of that object. So, for example, if we create a Rogue named Shadow and his @dex is equal to 15, then all throughout the different methods we call on Shadow, his @dex will remain the same, and we don't need to generate that info every time. Neato! <code>attr_reader</code> also allows us to call the name of that value on Shadow and see what it currently is. So for example, if we want to see Shadow's level, we can just enter Shadow.level and it will print his current @level.
    </p>
    <p>
-    Furthermore, the <code>find_all</code> method actually has a counterpart - <code>reject</code>. <code>reject</code> does the exact same thing as <code>find_all</code> except instead of returning an array of values returned a true value, it returns an array for all values that returned a <em>false</em> value. If we use the same array as before but change the method, we would see:
-    <pre><code>["red", "white", "blue", "gold", "silver"].reject {|i| i.size > 4}   #=> ["red", "blue", "gold"]</code></pre>
+     The next thing we write is our <code>def initialize</code> section. Here you can see that we allow the user to generate a new Rogue with a name (@name) and a weapon (@weapon). The level (@level) of a new Rogue is automatically set to 1, the strength (@str) at 10, and the dexterity (@dex) at 15. All these
    </p>
-   <p>One of my favorite things about <code>Enumerables#find_all</code> and <code>Enumerables#reject</code> is that they does exactly what they say they will do - they either find all instances or reject all instances that meet your requirements. One of Ruby's greatest strengths as a coding language is that the methods do what you think they would do. You don't have to guess what <code>find_all</code> and <code>reject</code> are going to do; they are highly intuitive. These are wonderful methods to represent Ruby.
+   <p>
+     Next we define the instance method <code>#attack</code>. This is going to generate an integer for us that we can use as our attack power in our adventure. A low level Rogue is not very powerful and therefore will only be rolling one die (rand(0..6)) until their strength is at least above 30, at which point they will then roll two dice for their damage output. Rogues are proficient with bows, so if you happened to have initialized your Rogue with a weapon "bow", then you get an extra damage roll too! We have a similar instance method next called <code>#saving_roll</code> that uses the Rogue's current dexterity to generate more dice rolls.
+   </p>
+   <p>
+     Lastly, we have the instance method <code>#level_up</code> that increases the Rogue's level and all of his stats. Because his stats are all instance variables the new values will be saved and be used across all of the other methods for this Rogue.
+   </p>
+   <p>
+     Code using this new class might look something like this:
+     <pre><code>
+     my_rogue = Rogue.new("Shadow", "stiletto") #generates a new Level 1 Rogue called Shadow equipped with a stiletto dagger
+     my_rogue.attack #outputs a random number between 1-6
+     my_rogue.saving_roll #outputs a random number between 2-12
+     my_rogue.level #outputs "1"
+     my_rogue.level_up #increases stats
+     my_rogue.level #outputs "2"
+     </code></pre>
+   </p>
+   <p>
+     Although this example was a little less "realistic" than it could have been, I hope it clearly demonstrates the flexability of generating a new class. You could easily generate a class of <code>dog</code> instead of <code>Rogue</code> and instead of <code>weapon</code> pass the dog their <code>favorite_toy</code>. You really have  complete flexibility to generate whatever you want!
    </p>
     </section>
 </div>
