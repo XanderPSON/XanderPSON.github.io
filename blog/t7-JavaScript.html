@@ -26,40 +26,22 @@
     </div>
 </div>
 <div id="body">
- <h1>JavaScript</h1> 
- <h2>JavaScript</h2>
+ <h1>Ruby Hashes vs JavaScript Objects</h1> 
+ <h2>H v O</h2>
  <h3>August 2nd, 2015</h3>
     <section>
         <p>
-            Scope is the concept of where variables exist and are able to be accessed. It is imperative that every coder fully understands the different varities of scope, as it affects every single variable that you will ever create. A strong working knowledge of variables is essential to mastering the concept of class and will help programmers DRY their code out.
-            There are 5 different kinds of scope. The variables that has the largest scope are also the ones that are used the least, but we will start there so we can "zoom in" on the variables that are most commonly used. The 5 different kinds of variables are, in order of largest scope to smallest scope:
-            <ul>
-            <li>Global: $variable</li>
-            <li>Class: @@variable</li>
-            <li>Instance: @variable</li>
-            <li>Local: variable</li>
-            <li>Block: variable</li></ul>
+        Understanding the similarities and differences between Ruby hashes and JavaScript objects can be a little difficult, so in this blog post, I will do my best to offer up a clear explanation for fellow beginning programmers.
         </p>
         <p>
-            <h3>Global: $variable</h3>
-            Global variables are defined by starting the variable name with $. Think of global variables as being able to walk through walls; they can be accessed anywhere, from within a simple loop to deep inside of a class. Although this sounds fantastic and extremely useful, global variables are actually very rarely used in code. Because they are able to accessed and changed anywhere, they're very susceptible to being changed, which means that they aren't always reliable, especially in much longer code. In general variables are only used in very specific situations.
+        Let's begin with the similarities. The core idea behind hashes and objects is the same: they both are ways of storing key-value pairs. Both hashes and objects contain variables that the programmer is able to name; those variables then point to another variable that the programmer also sets. Both hashes and objects are instantiated by setting the instance equal to a {}, where the properties lie within the {}. Both hashes and objects can have properties created by using a <code>key: value</code> definition method. Finally, both are able to have their keys called in order to return the key's value.
         </p>
         <p>
-            <h3>Class: @@variable</h3>
-            Class variables are defined by starting the variable name with @@. Class variables are able to accessed by every instance of that class. Therefore, class variables are variables that every instance of that class will have. For example, a class Human could have the class varibale @@heart = 1. Even if each instance of Human has a different name, different age, or different eye color, one thing is for certain; we all have a heart!
+        Despite the similarities there are many differences. One difference is that in recent updates to Ruby, hashes can now be organized somewhat like arrays, where before they couldn't. Another difference is in how you reference the keys. For example, with a hash, you could do something like either <code>hash["my_key"]</code> to return the value. With a hash you would do hash.my_key. This leads to another difference; with hashes you can have the key be anything; for example, you could have a key be 5 and the value be "pigs". Just so long as you do not have two keys-value pairs with the same key you can use integers. However, with objects, the key in the key-value pair is considered to be a "property", which is technically a string. Although they are strings you are allowed to ommit the quotations around them. This way you are able to access the keys by using dot notation (such as object.key) without having to put quotations around the key (like object."key").
         </p>
         <p>
-            <h3>Instance: @variable</h3>
-            Instance variables are defined by starting the variable name with @. They are variables that are unique to that particular instance of a given class. For example, in our class Human, we have have an @name = "Xander". @name is an appropriate instance variable because the name of a person changes with each person. @age or @eye_color would also be good instance variables.
-        </p>
-        <p>
-            <h3>Local: variable</h3>
-            Local variables are defined by starting the variable name with a letter. A local variables' scope is limited to that of the current environment. Local variables, along with block variables, are the most common kind of variable. Local variables are the closest thing to "default" variables, as they're usually what we use when we explain the concept of a variable to a beginner. For example, x is a variable in x = 5. my_array is also a variable in my_array = [1,2,3]. These variables do not carry over to other instances of their enviornment like class or instance variables do.
-        </p> 
-        <p>
-            <h3>Block: variable</h3>
-            Block variables are defined by starting the name with a letter, much like a local variable. The difference between a local and block variable is that a block variable is defined within a block and only exists in that block. Block variables are able to overwrite variables with the same name that exist on the outside, if only temporarily. Block variables are isolated and disappear after the block ends.
-        </p>                                                     
+        Knowing the proper use and syntax for both hashes and objects is essential for all fledgling programmers!
+        </p>                                                              
    </section>
 </div>
 <div id="footer">
