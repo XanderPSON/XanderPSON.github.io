@@ -9,6 +9,10 @@ body {
 #header {
 }
 
+@-ms-viewport{
+  width: device-width;
+}
+
 #branding{
     height: 15em;
     position: relative;
