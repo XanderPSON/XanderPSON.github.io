@@ -2,3 +2,9 @@
 	color: #5f5f5f;
 	text-shadow: 1px 1px 0px #f2f2f2;
 }
+
+#profileText {
+  visibility: hidden;
+  opacity: 0.0;
+  position: relative;
+}
