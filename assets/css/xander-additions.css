@@ -30,3 +30,9 @@
   margin-top: -10%; }
 
 /*# sourceMappingURL=xander-additions.css.map */
+
+.btn-resume {
+  float: right;
+  text-align: center;
+  top: -15px;
+}
